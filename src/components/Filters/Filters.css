@@ -1,0 +1,261 @@
+@-webkit-keyframes inputHighlighter {
+  from {
+    background: #2f2f2f;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@-moz-keyframes inputHighlighter {
+  from {
+    background: #2f2f2f;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+@keyframes inputHighlighter {
+  from {
+    background: #2f2f2f;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
+}
+
+/* отключение стрелок input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.filters {
+  position: sticky;
+  top: 120px;
+  display: flex;
+  height: 100%;
+  gap: 20px;
+}
+
+.filters__form {
+  min-width: 260px;
+  height: 100%;
+}
+
+.filters__submit {
+  width: 100%;
+  border: 1px solid #9a9a9a;
+  background-color: inherit;
+  color: inherit;
+  padding: 8px 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.filters__submit:active {
+  scale: 98%;
+  opacity: 0.7;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter {
+  margin-bottom: 40px;
+}
+
+.filter__filter-name {
+  padding: 0;
+  margin: 0 0 3px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #9a9a9a;
+}
+
+.filter__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter__label {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  width: 80px;
+  height: 30px;
+  border: 1px solid #2f2f2f;
+  border-radius: 5px;
+}
+
+.label {
+  color: #999;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.filter__span {
+  margin-right: 10px;
+  color: #9a9a9a;
+  user-select: none;
+  /* font-weight: 500; */
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.filter__input {
+  border: none;
+  outline: none;
+  width: 100%;
+  color: inherit;
+  background-color: inherit;
+}
+
+.filter__select {
+  outline: none;
+  width: 140px;
+  background-color: inherit;
+  color: inherit;
+  border: 1px solid #2f2f2f;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.filter__group {
+  position: relative;
+}
+
+.filter__text-input {
+  padding: 10px 0;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #2f2f2f;
+  background-color: transparent;
+  color: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.filter__text-input:focus {
+  outline: none;
+}
+
+.filter__text-input:focus ~ .label,
+.filter__text-input:valid ~ .label {
+  top: -20px;
+  font-size: 14px;
+  color: inherit;
+}
+
+.filter__bar {
+  position: relative;
+  display: block;
+  max-width: 100%;
+}
+.filter__bar:before,
+.filter__bar:after {
+  content: "";
+  height: 1px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: #ccc;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.filter__bar:before {
+  left: 50%;
+}
+.filter__bar:after {
+  right: 50%;
+}
+
+.filter__text-input:focus ~ .filter__bar:before,
+.filter__text-input:focus ~ .filter__bar:after {
+  width: 50%;
+}
+
+.filter__highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.input:focus ~ .filter__highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+.filters__navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+}
+
+.filters__button {
+  width: 34px;
+  height: 48px;
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  background-size: cover;
+  transition: all 0.3s ease-in-out;
+}
+
+.filters__button_type_up {
+  background-image: url("../../images/arrow-top.svg");
+}
+
+.filters__button_type_up:hover {
+  transform: translateY(-5px);
+}
+
+.filters__button_type_down {
+  background-image: url("../../images/arrow-bottom.svg");
+}
+
+.filters__button_type_down:hover {
+  transform: translateY(5px);
+}
+
+@media screen and (max-width: 950px) {
+  .filters {
+    position: static;
+    display: flex;
+    height: 100%;
+    align-self: center;
+  }
+
+  .filters__navigation {
+    display: none;
+  }
+}

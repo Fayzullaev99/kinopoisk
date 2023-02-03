@@ -1,0 +1,11 @@
+.main {
+  margin: 0 auto;
+}
+
+.main-page {
+  max-width: 1680px;
+}
+
+.other-page {
+  max-width: 1440px;
+}

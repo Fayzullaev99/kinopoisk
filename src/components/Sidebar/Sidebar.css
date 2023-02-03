@@ -1,0 +1,31 @@
+.sidebar {
+  background-color: #0000004d;
+  display: none;
+  justify-content: flex-end;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.open {
+  display: flex;
+}
+
+.sidebar__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f0f0f;
+  width: 100%;
+  padding: 159px 22px 90px;
+}
+
+@media screen and (min-width: 950px) {
+  .sidebar {
+    display: none;
+  }
+}

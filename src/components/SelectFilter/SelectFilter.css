@@ -1,0 +1,21 @@
+.select {
+  color: black;
+  width: 202px;
+}
+
+.select__value-container {
+  padding: 2px 4px !important;
+}
+
+.select__multi-value__remove {
+  padding: 0 !important;
+  border: none !important;
+}
+
+.select__indicator {
+  padding: 0 !important;
+}
+
+.select__control--menu-is-open .select__indicator {
+  transform: rotate(180deg) !important;
+}

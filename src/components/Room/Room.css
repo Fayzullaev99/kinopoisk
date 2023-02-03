@@ -1,0 +1,55 @@
+.room {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 65px;
+  z-index: 5;
+}
+
+.room__video {
+  display: block;
+
+  height: 680px !important;
+}
+
+.room__video iframe {
+  height: 680px !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .room__container {
+    height: 640px !important;
+  }
+
+  .room__video {
+    height: 640px !important;
+  }
+
+  .room__video iframe {
+    height: 640px !important;
+  }
+}
+
+@media screen and (max-width: 940px) {
+  .room__container {
+    height: 67vw !important;
+  }
+
+  .room__video {
+    height: 67vw !important;
+  }
+
+  .room__video iframe {
+    height: 67vw !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #kinobd-buttons div {
+    padding: 5px !important;
+    border-radius: 5px !important;
+  }
+}
+
+#kinobd-buttons div {
+  background: #0f0f0f !important;
+}

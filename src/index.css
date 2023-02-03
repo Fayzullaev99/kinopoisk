@@ -1,0 +1,45 @@
+@import url("./vendor/normalize.css");
+@import url("./vendor//fonts/fonts.css");
+
+/* nav links */
+@keyframes glow {
+  0% {
+    border-color: #393;
+    background-color: #393;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.2), inset 0 0 5px rgba(0, 255, 0, 0.1);
+  }
+  100% {
+    border-color: #6f6;
+    background-color: #6f6;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.6),
+      inset 0 0 10px rgba(0, 255, 0, 0.4);
+  }
+}
+
+html,
+body {
+  scrollbar-color: #222 #0b0a0d; /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: thin;
+  -webkit-tap-highlight-color: transparent; /* для мобилок */
+}
+
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+  background-color: #0b0a0d;
+  border: 4px solid transparent;
+  width: 8px;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #222;
+  border-radius: 8px;
+}
+
+.noselect {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

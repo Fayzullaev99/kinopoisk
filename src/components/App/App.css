@@ -1,0 +1,15 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 100%;
+  min-width: 320px;
+  background-color: #0f0f0f;
+  color: #f2f3f4;
+  font-family: Inter, Arial, sans-serif;
+  position: relative;
+}
+
+.overflow {
+  overflow: hidden;
+}

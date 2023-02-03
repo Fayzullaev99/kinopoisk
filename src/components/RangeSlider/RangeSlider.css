@@ -1,0 +1,28 @@
+.range {
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.range__track {
+  height: 36px;
+  display: flex;
+  width: 100%;
+}
+
+.range__background {
+  height: 3px;
+  width: 100%;
+  border-radius: 4px;
+  align-self: center;
+}
+
+.range__thumb {
+  height: 12px;
+  width: 12px;
+  border-radius: 100%;
+  background-color: #fff;
+  display: flex;
+  outline: none;
+}
